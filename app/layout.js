@@ -7,7 +7,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Provider } from "react-redux";
 import {store, persistor} from "./store/store";
 import { PersistGate } from "redux-persist/integration/react";
-import Head from "next/head";
+
 
 
 const inter = Inter({ subsets: ["latin"] });

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -23,12 +24,12 @@ const successPage = () => {
 
                     <div className='flex gap-1'> 
 
-                    <a href="/" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
+                    <Link href="/" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
                         continue shopping
-                    </a>
-                    <a href="/sign-up" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
+                    </Link>
+                    <Link href="/sign-up" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
                        sign-up
-                    </a>
+                    </Link>
 
                     </div>
 

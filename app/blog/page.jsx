@@ -6,7 +6,7 @@ const BlogPage = () => {
   return (
     <div>
         <div className='w-full p-2 m-4'>
-            <Breadcrumbs path="/blog"/>
+            <Breadcrumbs path={"/blog"}/>
 
         </div>
         <div className="flex flex-col md:flex-row bg-dark-100">

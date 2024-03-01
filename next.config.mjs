@@ -8,6 +8,9 @@ const nextConfig = {
     images: {
       domains: ['res.cloudinary.com'],
     },
+    experimental: {
+      missingSuspenseWithCSRBailout: false,
+    },
     webpack: (config, { dev, isServer }) => {
       // For the client side
       if (!isServer) {
