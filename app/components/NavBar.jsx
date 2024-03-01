@@ -6,7 +6,6 @@ import {  ChevronDownIcon, Circle, SearchIcon, ShoppingCartIcon, User2Icon, X,} 
 import Cart from './Cart';
 import { UserButton, useUser } from '@clerk/nextjs';
 import { useSelector,useDispatch } from 'react-redux';
-// import { useSearchParams } from 'next/navigation'
 import { resetCart } from '../store/cartReducer';
 import Card from './Card';
 import useFetch from '../hooks/useFetch';
@@ -54,14 +53,10 @@ const NavBar = () => {
   };
 
   // search params for success page or success payment done
-  // const searchParams = useSearchParams()
+
   const dispatch = useDispatch()
 
-  // useEffect(() => {
-  //   if(searchParams.get("success")){
-  //     dispatch(resetCart())
-  //   }
-  // },[])
+
 
   useEffect(() => {
     const handleSuccess = () => {
