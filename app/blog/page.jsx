@@ -1,6 +1,6 @@
 import React from "react";
 import Breadcrumbs from "../components/BreadCrumbs";
-import Link from "next/link";
+
 
 const BlogPage = () => {
   return (
@@ -47,9 +47,9 @@ const BlogPage = () => {
           <div className="mb-6">
             <p className="text-gray-600">
               Ready to redefine your fashion journey?{" "}
-              <Link to="/sign-up" className="text-blue-500 hover:underline">
+              <a href="/sign-up" className="text-blue-500 hover:underline">
                 Sign Up Now
-              </Link>
+              </a>
               for the ultimate blend of style and convenience.
             </p>
           </div>
