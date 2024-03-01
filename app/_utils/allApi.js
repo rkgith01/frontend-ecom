@@ -2,8 +2,8 @@ import axios from "axios";
 
 const apiKey = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
 // console.log(apiKey)
-const apiUrl = 'http://localhost:1337/api'
-// const apiUrl = process.env.NEXT_APP_API_URL
+// const apiUrl = 'http://localhost:1337/api'
+const apiUrl = process.env.NEXT_APP_API_URL
 
 
 export const axiosClient = axios.create({
