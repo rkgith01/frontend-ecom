@@ -1,7 +1,5 @@
-
 import { useEffect, useState } from "react";
-import {axiosClient} from "../_utils/allApi";
-
+import { axiosClient } from "../_utils/allApi";
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);

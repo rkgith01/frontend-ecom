@@ -1,40 +1,45 @@
-import Link from 'next/link'
-import React from 'react'
-
+import Link from "next/link";
+import React from "react";
 
 const successPage = () => {
-    
   return (
     <div>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="bg-white rounded-lg shadow-lg p-8 max-w-md">
+          <div className="flex items-center justify-center">
+            <img
+              src="./logo.jpeg"
+              alt="brandlogo"
+              className="h-24 w-24 object-cover"
+            />
+          </div>
+          <h2 className="text-2xl font-bold text-center text-gray-800 mt-4">
+            Your order has been placed
+          </h2>
+          <p className="text-gray-600 text-center mt-2">
+            Thank you for shopping with Luxue-Lease
+          </p>
+          <p className="text-gray-600 text-center mt-2">
+            if any queries please reach out to us support@email.com
+          </p>
 
-        <div className="min-h-screen flex items-center justify-center">
-            <div className="bg-white rounded-lg shadow-lg p-8 max-w-md">
-                <div className="flex items-center justify-center">
-                 <img src='./logo.jpeg' alt="brandlogo" className="h-24 w-24 object-cover" />
-                </div>
-                    <h2 className="text-2xl font-bold text-center text-gray-800 mt-4">
-                         Your order has been placed
-                    </h2>
-                    <p className="text-gray-600 text-center mt-2">
-                       Thank you for shopping with Luxue-Lease
-                    </p>
-                    <p className="text-gray-600 text-center mt-2">
-                       if any queries please reach out to us  support@email.com
-                    </p>
+          <div className="flex gap-1">
+            <Link
+              to="/"
+              className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto"
+            >
+              continue shopping
+            </Link>
+            <Link
+              to="/sign-up"
+              className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto"
+            >
+              sign-up
+            </Link>
+          </div>
 
-                    <div className='flex gap-1'> 
-
-                    <Link to="/" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
-                        continue shopping
-                    </Link>
-                    <Link to="/sign-up" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
-                       sign-up
-                    </Link>
-
-                    </div>
-
-                {/* other products */}
-                {/* <div className="grid grid-cols-2 gap-4 mt-8">
+          {/* other products */}
+          {/* <div className="grid grid-cols-2 gap-4 mt-8">
                     <div className="flex flex-col items-center">
                         <img
                         className="h-24 w-24 object-cover rounded"
@@ -48,16 +53,10 @@ const successPage = () => {
                     </div>
                 
                 </div> */}
-            </div>
         </div>
-  
-
-
-
-
-
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default successPage
+export default successPage;

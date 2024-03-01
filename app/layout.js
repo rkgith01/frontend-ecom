@@ -5,21 +5,15 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Provider } from "react-redux";
-import {store, persistor} from "./store/store";
+import { store, persistor } from "./store/store";
 import { PersistGate } from "redux-persist/integration/react";
-
-
 
 const inter = Inter({ subsets: ["latin"] });
 
-
 export default function RootLayout({ children }) {
-  
   return (
-
-    
     <ClerkProvider>
-      <html lang="en">  
+      <html lang="en">
         <head>
           {/* Basic Meta Tags */}
           <title>LuxeLease - Elevate Your Style, Effortlessly</title>
@@ -29,16 +23,16 @@ export default function RootLayout({ children }) {
           />
 
           {/* Viewport Meta Tag */}
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           {/* Favicon */}
           <link rel="icon" href="/logo.jpeg" />
 
           {/* Open Graph Meta Tags */}
-          <meta property="og:title" content="LuxeLease - Elevate Your Style, Effortlessly" />
+          <meta
+            property="og:title"
+            content="LuxeLease - Elevate Your Style, Effortlessly"
+          />
           <meta
             property="og:description"
             content="Redefine fashion with LuxeLease - Your gateway to high-end styles for any occasion, without the heavy price tag."
@@ -49,7 +43,10 @@ export default function RootLayout({ children }) {
 
           {/* Twitter Meta Tags */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="LuxeLease - Elevate Your Style, Effortlessly" />
+          <meta
+            name="twitter:title"
+            content="LuxeLease - Elevate Your Style, Effortlessly"
+          />
           <meta
             name="twitter:description"
             content="Redefine fashion with LuxeLease - Your gateway to high-end styles for any occasion, without the heavy price tag."
@@ -59,16 +56,13 @@ export default function RootLayout({ children }) {
         <body className={inter.className}>
           <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-            <NavBar/>
-            {children}
-            <Footer/> 
+              <NavBar />
+              {children}
+              <Footer />
             </PersistGate>
           </Provider>
         </body>
-
       </html>
     </ClerkProvider>
   );
 }
-
-
