@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { RiMenu5Fill } from "react-icons/ri";
 import Image from 'next/image';
-import {  ChevronDownIcon, Circle, Link, SearchIcon, ShoppingCartIcon, User2Icon, X,} from 'lucide-react';
+import {  ChevronDownIcon, Circle, SearchIcon, ShoppingCartIcon, User2Icon, X,} from 'lucide-react';
 import Cart from './Cart';
 import { UserButton, useUser } from '@clerk/nextjs';
 import { useSelector,useDispatch } from 'react-redux';
@@ -29,7 +29,7 @@ const NavBar = () => {
   const [searchItem, setSearchItem] = useState("");
   const [filteredData, setFilteredData] = useState([]);
     
-  // console.log(data)
+  console.log(data)
 
   const navigationItems = [
     { label: 'Men', to: `/category/1` },
