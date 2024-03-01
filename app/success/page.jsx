@@ -24,10 +24,10 @@ const successPage = () => {
 
                     <div className='flex gap-1'> 
 
-                    <Link href="/" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
+                    <Link to="/" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
                         continue shopping
                     </Link>
-                    <Link href="/sign-up" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
+                    <Link to="/sign-up" className="capitalize bg-blue-500 text-white px-4 py-2 rounded mt-8 block mx-auto">
                        sign-up
                     </Link>
 

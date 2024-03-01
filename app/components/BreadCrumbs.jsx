@@ -2,7 +2,7 @@
 import { Home } from 'lucide-react'
 import React from 'react'
 
-function Breadcrumbs({path}) {
+function Breadcrumbs({props: path}) {
 
   return (
     <div>
