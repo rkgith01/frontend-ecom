@@ -6,10 +6,11 @@ import {  ChevronDownIcon, Circle, SearchIcon, ShoppingCartIcon, User2Icon, X,} 
 import Cart from './Cart';
 import { UserButton, useUser } from '@clerk/nextjs';
 import { useSelector,useDispatch } from 'react-redux';
+
 import { resetCart } from '../store/cartReducer';
 import Card from './Card';
 import useFetch from '../hooks/useFetch';
-import Link from "next/link";
+
 
 const NavBar = () => {
 
@@ -32,13 +33,13 @@ const NavBar = () => {
   console.log(data)
 
   const navigationItems = [
-    { label: 'Men', to: `/category/1` },
-    { label: 'Women', to: '/category/2' },
-    { label: 'Sale', to: '/category/3' },
-    { label: 'Blog', to: '/blog' }, 
-    { label: 'About', to: '/' },
-    { label: 'Contact', to: '/' },
-    { label: 'Stores', to: '/' },
+    { label: 'Men', href: `/category/1` },
+    { label: 'Women', href: '/category/2' },
+    { label: 'Sale', href: '/category/3' },
+    { label: 'Blog', href: '/blog' }, 
+    { label: 'About', href: '/' },
+    { label: 'Contact', href: '/' },
+    { label: 'Stores', href: '/' },
     // { label: 'USD', href: '/' , icon: <ChevronDownIcon/>},
   ];
 
@@ -274,14 +275,14 @@ const toggleSearchInput = () => {
               <ul className="flex flex-col items-center gap-6 text-sm text-gray-500">
                 {navigationItems.map(({ label, href, icon }, index) => (
                   <li key={index}>
-                    <Link
+                    <a
                       className="flex items-center gap-1 text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                      to={to}
+                      href={href}
                       onClick={toggleMobileMenu}
                     >
                       {label}
                       {icon}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
